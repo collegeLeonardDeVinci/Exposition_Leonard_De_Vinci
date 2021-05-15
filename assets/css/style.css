@@ -10,10 +10,10 @@
 body{
     min-height: 100vh;
     overflow-x: hidden;
-    background:url(/assets/img/FOND.jpg);
-    background-position:center;
-    background-size:cover;
-    background-attachment: fixed;
+    background:url(/assets/img/FOND.jpg)!important;
+    background-position:center!important;
+    background-size:cover!important;
+    background-attachment: fixed!important;
 }
 
 p{
