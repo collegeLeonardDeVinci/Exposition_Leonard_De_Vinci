@@ -10,7 +10,9 @@
 body{
     min-height: 100vh;
     overflow-x: hidden;
-    background:url(/assets/img/FOND.jpg)center/cover;
+    background:url(/assets/img/FOND.jpg);
+    background-position:center;
+    background-size:cover;
     background-attachment: fixed;
 }
 
