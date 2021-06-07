@@ -40,8 +40,21 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url(../img/fond-header-da-vinci.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-header video{
+
+@media(max-width:900px){
+    header{
+        background: url(../img/fond-header-da-vin-tablette.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+/* header video{
     position: absolute;
     top: 0;
     left: 0;
@@ -71,7 +84,7 @@ header h1{
     header h1{
         font-size: 4rem;
     }
-}
+} */
 
 /* ////////////// BIENVENUE ////////////// */
 
