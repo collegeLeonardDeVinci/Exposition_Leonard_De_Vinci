@@ -760,3 +760,23 @@ header{
         font-size: 1.5rem;
     }
 }
+
+      /* ////////////// 2021 ////////////// */
+
+
+.biblio{
+    display: flex;
+    flex-direction: column;
+    padding: 0 5vw;
+}
+
+.biblio p,
+.biblio p a{
+    font-size: 1.3rem;
+}
+.biblio p{
+    text-align: center;
+}
+.biblio p a{
+    color: brown;
+}
