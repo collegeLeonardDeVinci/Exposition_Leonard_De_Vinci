@@ -14,11 +14,9 @@ body{
     background-attachment: fixed;
 }
 
-p{
+p,a{
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
-
-
 }
 
 h2{
@@ -40,51 +38,20 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../img/fond-header-da-vinci.jpg);
+    background: url(../img/funnyJoconde.gif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-@media(max-width:900px){
+@media(max-width:1200px){
     header{
-        background: url(../img/fond-header-da-vin-tablette.jpg);
+        background: url(../img/funnyJocondeMobil.gif);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 }
-/* header video{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    object-fit: cover;
-    transition: 0.4s ease;
-    z-index: -1;
-
-}
-
-header h1{
-    font-weight: 700;
-    color: white;
-    text-shadow: 4px 4px 15px black;
-    position: relative;
-    z-index: 2;
-    letter-spacing: 1px;
-    font-size: 6rem;
-    text-align: center;
-    padding: 0 10vw;
-}
-
-@media (max-width:750px){
-    header h1{
-        font-size: 4rem;
-    }
-} */
 
 /* ////////////// BIENVENUE ////////////// */
 
@@ -125,7 +92,59 @@ header h1{
     padding: 20px 13vw;
     line-height: 1.3;
 }
+.bienvenue-en-image{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 70vh 25vh 29vh;
+    padding: 0 5vw;
+}
+.bienvenue-en-image1{
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+.bienvenue-en-image1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
+.bienvenue-en-image2{
+    grid-column: 2/5;
+    grid-row: 1/3;
+    padding-left: 20px;
+}
+.bienvenue-en-image2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.bienvenue-en-image3{
+    grid-column: 2/5;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width:1200px){
+    .bienvenue-en-image{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .bienvenue-en-image1{
+        width: 40%;
+    }
+    .bienvenue-en-image2{
+        width: 80%;
+        padding: 5vh 0;
+    }
+    .bienvenue-en-image3{
+        width: 40%;
+    }
+}
 @media(max-width:750px){
     .bienvenue{
         justify-content: center;
@@ -140,7 +159,7 @@ header h1{
 .presentation{
     min-height: 70vh;
     width: 100vw;
-    padding: 5vh 5vw 15vh 5vw;
+    padding: 5vh 5vw 5vh 5vw;
 }
 
 .presentation h2{
@@ -149,81 +168,92 @@ header h1{
     word-spacing: 2px;
     font-weight: 400;
 }
-
 .img-presentation{
     width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.img-presentation1{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    padding: 50px 0 0 0;
+    padding:10vh 10vw;
 }
-
-.img-presentation img{
-    display: inline-block;
-    object-fit: contain;
-    object-position: center;
-    padding:15px;
-    height: 50vh;
-    transition: 0.2s ease-in;
-}
-.img-presentation img:hover{
-    filter:drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.548))
-}
-
-.img-presentation .leo1{
+.img-presentation1 .leo1{
     width: 40%;
-    height: 50vh;
+    min-height: 50vh;
     object-fit: cover;
+    padding: 0 20px;
 }
-.img-presentation .leo2{
-    width: 25%;
-    padding: 7px;
+.img-presentation1 .leo2{
+    width: 35%;
+    min-height: 50vh;
+    object-fit: cover;
+    padding: 0 20px;
 }
-.img-presentation .leo3{
-    width: 17.5%; 
+.img-presentation2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10vw;
 }
-.img-presentation .leo4{
-    width: 17.5%;
+.img-presentation2 img{
+    padding: 0 20px !important;
 }
+.legende-presentation2{
+    padding: 30px 10vw!important;
+    font-size: 1.2rem;
+}
+.img-presentation3{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10vw;
+}
+
 
 @media(max-width:1200px){
-    .presentation{
-        min-height: 60vh;
-    }
-    .img-presentation img{
-        height: auto;
-    }
-    .img-presentation .leo1{
-        width:80%;
-        height: auto;
-    }
-    .img-presentation .leo2{
-        width: 30%;
-    }
-    .img-presentation .leo3{
-        width: 30%;
-    }
-    .img-presentation .leo4{
-        width: 30%;
-    }
+   .img-presentation1,
+   .img-presentation2,
+   .img-presentation3 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+   }
+   .img-presentation2 .logos-presentation2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+   }
+   .img-presentation2 .legende-presentation2{
+       font-size: 1.2rem;   }
+   .img-presentation1 img,
+   .img-presentation2 img,
+   .img-presentation3 img{
+       width: 80%!important;
+       object-fit: cover!important;
+       padding: 20px 0!important;
+   }
 }
 @media(max-width:750px){
-    .img-presentation .leo1{
-        width: 100%;
+    .img-presentation2{
+        padding: 0 10vw!important;
     }
-    .img-presentation .leo2{
-        width: 80%;
-    }
-    .img-presentation .leo3{
-        width: 80%;
-    }
-    .img-presentation .leo4{
-        width: 80%;
-    }
+    .img-presentation1 img,
+   .img-presentation2 img,
+   .img-presentation3 img{
+       width: 100%!important;
+       padding: 5vh 0;
+   }
 }
-
 /* ////////////// IDENTITE////////////// */
 .identite{
     min-height: 100vh;
@@ -280,7 +310,9 @@ header h1{
 
 
 
-/* ////////////// RECIT////////////// */
+/* ////////////// PARCOURS////////////// */
+
+
 .recit{
     width: 100vw;
 }
@@ -295,7 +327,7 @@ header h1{
 .recits{
     min-height:100vh;
     width: 100%;
-    min-height:100vh ;
+    min-height:65vh ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -378,10 +410,13 @@ header h1{
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 450px;
-    height: 450px;
+    width: 550px;
+    height: 480px;
     box-shadow: 15px 30px 25px rgba(0, 0, 0, 0.4);
 
+  }
+  #slider4,#slider6{
+      background-size:contain;
   }
   @media(max-width:1200px){
       .a-dit{
@@ -398,11 +433,11 @@ header h1{
           justify-content: flex-start;
           padding: 0;
       }
-      .swiper-container{
+      .slider1{
           height: 50vh;
           padding: 0;
       }
-      .swiper-slide{
+      .slide1{
           width: 300px;
           height: 300px;
       }
@@ -436,9 +471,8 @@ header h1{
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
   }
-
-  
 
   .img-lieux1 img{
       padding: 15px;
@@ -484,22 +518,33 @@ header h1{
     flex-wrap: wrap;
   }
 
-  
   .img-lieux2 img{
       padding:15px;
       width: 40%;
       transition: .4s ease;
   }
 
+  @media (max-width:1200px){
+    .img-lieux1 img{
+        width: 80%;
+    }
+    .img-lieux2 img{
+        width: 80%;
+    }
+    img#lieux1:hover,
+    img#lieux2:hover,
+    img#lieux3:hover,
+    img#lieux4:hover,
+    img#lieux5:hover,
+    img#lieux6:hover{
+        transform: none!important;
+    }
 
-
-
-
-
+  }
    /* ////////////// OEUVRES////////////// */
 
    .oeuvres{
-       min-height: 200vh;
+       min-height: 100vh;
        width: 100vw;
        background-color: rgba(255, 255, 255, 0.507);
        padding-bottom: 5vh;
@@ -531,20 +576,7 @@ header h1{
        filter:sepia(1.8) saturate(0.5);
    }
 
-   .oeuvres2{
-       width: 100%;
-       min-height: 80vh;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       flex-wrap: wrap;
-       padding-top: 5vh;
-   }
-   .oeuvres2 img{
-       width: 35%;
-       min-width: 300px;
-       margin: 10px;
-   }
+ 
     @media (max-width:1200px){
         .oeuvres1{
             min-height: 40vh;
@@ -557,6 +589,111 @@ header h1{
         }
     }
 
+ /* ////////////// MACHINES ////////////// */
+ .machines{
+     padding-bottom: 10vh;
+ }   
+ .machines h2{
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 400;
+    padding: 5vh 0 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+   .machines p{
+    padding: 0 0 20px 5vw;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+   } 
+   .machines p a{
+       text-decoration: none;
+       color: brown;
+   }
+   .machines-img{
+     width: 100%;
+   }
+   .machines-img a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+   }
+   .machines-img a img{
+       width: 80%;
+
+   }
+/* ////////////// JOCONDE ////////////// */
+.joconde{
+    background-color: rgba(255, 255, 255, 0.507);
+    padding: 5vh 0 10vh;
+}
+.joconde h2{
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 400;
+    padding: 5vh 0 5vh 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+   .joconde p{
+    padding: 0 0 20px 5vw;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+   } 
+   .joconde p a{
+       text-decoration: none;
+       color: brown;
+   }
+   .joconde-img{
+     width: 100%;
+   }
+   .joconde-img a{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+   }
+   .joconde-img a img{
+       width: 80%;
+
+   }
+
+  /* ////////////// INVENTIONS ////////////// */
+    .inventions h2{
+        font-size: 3.5rem;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        font-weight: 400;
+        padding: 5vh 0 5vh 5vw;
+    }
+    .oeuvres2{
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 5vh;
+    }
+    .oeuvres2 img{
+        width: 35%;
+        min-width: 300px;
+        margin: 10px;
+    }
+    @media (max-width:1200px){  
+        .inventions h2{
+            text-align: center;
+        }
+        .oeuvres2{
+            min-height: 40vh;
+        }
+
+    }
       /* ////////////// 2021 ////////////// */
 
     .modern2021{
