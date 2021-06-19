@@ -38,7 +38,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(../img/funnyJoconde.gif);
+    background: url(../img/funnyJoconde.JPG);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ header{
 
 @media(max-width:1200px){
     header{
-        background: url(../img/funnyJocondeMobil.gif);
+        background: url(../img/funnyJocondeMobile.JPG);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
